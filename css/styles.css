@@ -16,8 +16,6 @@
   --indent-vertical: 72px;
   --indent-works: 64px;
   --item: 1;
-  --header-idx: 20;
-  --modal-idx: 10;
 }
 
 body {
@@ -66,8 +64,8 @@ button {
   padding: 0 16px;
   margin: 0 auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -241,9 +239,64 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/people-office.jpg");
+    url("../images/img-bgn_mob@1x.jpg");
   background-color: var(--grey);
   padding: 112px 0;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/img-bgn_mob@2x.jpg");
+  }
+}
+
+@media only screen and (min-width: 429px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/img-bgn_tabl@1x.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/img-bgn_tabl@2x.jpg");
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/img-bgn_desc@1x.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/img-bgn_desc@2x.jpg");
+    }
+  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -732,6 +785,11 @@ button {
   background-color: var(--navyblue);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: var(--white);
+}
+@media only screen and (max-width: 428px) {
+  .subscribe-input {
+    width: 267px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .subscribe-input {
