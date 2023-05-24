@@ -159,6 +159,7 @@ button {
 @media only screen and (min-width: 1158px) {
   .address-list {
     flex-direction: row;
+    gap: 40px;
   }
 }
 .nav {
@@ -509,13 +510,19 @@ button {
     --item: 2;
     row-gap: var(--indent-works);
     flex-direction: row;
-    padding: 0 92px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .team-list {
+    width: 552px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media only screen and (min-width: 1158px) {
   .team-list {
     --item: 4;
-    padding: 0;
   }
 }
 
@@ -596,7 +603,13 @@ button {
 @media only screen and (min-width: 768px) {
   .customers-list {
     --item: 3;
-    padding: 0 92px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers-list {
+    width: 552px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -648,7 +661,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-direction: column;
   gap: 72px;
 }
 
@@ -659,32 +671,40 @@ button {
     flex-wrap: wrap;
     row-gap: var(--indent-vertical);
     column-gap: var(--indent);
+    max-width: 552px;
   }
 }
+
 @media only screen and (min-width: 1158px) {
   .footer-container {
+    max-width: 1158px;
     flex-wrap: nowrap;
     column-gap: normal;
   }
 }
+
 .footer-left {
   margin: 0 65px;
 }
 
 @media only screen and (min-width: 768px) {
   .footer-left {
-    margin-left: 92px;
+    margin-left: 0;
     margin-right: 0;
     width: 264px;
   }
   .subscribe {
-    margin-left: 92px;
+    width: 453px;
   }
 }
+
 @media only screen and (min-width: 1158px) {
   .footer-left {
     margin-right: 120px;
     margin-left: 0;
+  }
+  .subscribe {
+    margin-left: 80px;
   }
 }
 
@@ -706,6 +726,7 @@ button {
 @media only screen and (min-width: 768px) {
   .social-media {
     margin-left: 0;
+    margin-right: 0;
   }
   .logo-footer {
     margin-left: 0;
@@ -744,7 +765,6 @@ button {
 @media only screen and (min-width: 768px) {
   .subscribe-title {
     margin-left: 0;
-    margin-right: 0;
   }
   .social-title {
     margin-left: 0;
@@ -757,17 +777,6 @@ button {
 }
 .icon-footer {
   fill: var(--cloud);
-}
-
-@media only screen and (min-width: 786px) {
-  .subscribe {
-    margin-left: 95px;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .subscribe {
-    margin-left: 80px;
-  }
 }
 
 .subscribe-input {
@@ -786,7 +795,7 @@ button {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: var(--white);
 }
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 427px) {
   .subscribe-input {
     width: 267px;
   }
@@ -834,6 +843,7 @@ button {
 }
 @media only screen and (min-width: 768px) {
   .input-form {
+    justify-content: flex-start;
     flex-direction: row;
     gap: 24px;
   }
@@ -1246,27 +1256,32 @@ button {
   color: var(--slate);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.mobile-contacts-item {
+  margin-bottom: 40px;
+}
 .mobile-phone {
   display: block;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 1.11;
-  margin-bottom: 40px;
-  color: var(--slate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--iris);
 }
-
-.mobile-contacts .link:hover,
-.mobile-contacts .link:focus {
-  color: var(--ocean);
-}
-
 .mobile-socials {
   display: flex;
   justify-content: left;
-  gap: 56px;
+  gap: 28px;
 }
+
+@media only screen and (min-width: 427px) {
+  .mobile-phone {
+    font-size: 36px;
+  }
+
+  .mobile-socials {
+    gap: 56px;
+  }
+}
+
 .menu-icon {
   stroke: var(--navyblue);
   fill: var(--cornflower);
