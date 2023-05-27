@@ -43,7 +43,6 @@ ul {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 
 button {
@@ -64,8 +63,8 @@ button {
   padding: 0 16px;
   margin: 0 auto;
 
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -462,6 +461,7 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: var(--slate);
 }
 
 @media only screen and (min-width: 1158px) {
@@ -855,12 +855,51 @@ button {
 
 /* Portfolio */
 
+.portfolio {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+@media only screen and (min-width: 876px) {
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+.portfolio-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--navyblue);
+}
+
 .filter-list {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 72px;
+  justify-content: flex-start;
+  column-gap: var(--indent);
+  row-gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .filter-list {
+    margin-bottom: 72px;
+  }
 }
 
 .button-filter {
@@ -891,30 +930,36 @@ button {
 
 .portfolio-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   row-gap: 48px;
-  column-gap: 24px;
-  --item: 3;
-  width: calc(100% - (var(--indent) * (var(--item) - 1))) / var(--item);
+  column-gap: var(--indent);
+  --item: 1;
 }
 
-.portfolio {
-  padding-top: 96px;
-  padding-bottom: 120px;
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    flex-direction: row;
+    row-gap: var(--indent-vertical);
+    --item: 2;
+  }
 }
 
-.portfolio-title {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--navyblue);
+@media only screen and (min-width: 1158px) {
+  .portfolio-list {
+    --item: 3;
+  }
 }
 
 .card-item {
-  margin-right: 0;
-  margin-bottom: 0;
+  flex-basis: calc((100% - (var(--indent) * (var(--item) - 1))) / var(--item));
+  height: 400px;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-item {
+    height: 420px;
+  }
 }
 
 .card-link {
